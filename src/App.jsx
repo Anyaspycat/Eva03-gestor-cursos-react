@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import ThemeToggle from "./components/ThemeToggle";
 import SearchBar from "./components/SearchBar";
 import TeacherFilter from "./components/TeacherFilter";
 import FavoriteStats from "./components/FavoriteStats";
@@ -12,10 +13,17 @@ function App() {
   const [courses, setCourses] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTeacher, setSelectedTeacher] = useState("");
+
   const [favorites, setFavorites] = useLocalStorage(
     "favoriteCourses",
     []
   );
+
+  const [darkMode, setDarkMode] = useLocalStorage(
+    "darkMode",
+    false
+  );
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -61,6 +69,14 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle("dark-theme", darkMode);
+
+    return () => {
+      document.body.classList.remove("dark-theme");
+    };
+  }, [darkMode]);
+
   const teachers = useMemo(() => {
     const teacherIds = courses.map((course) => course.teacherId);
 
@@ -100,9 +116,18 @@ function App() {
     setFavorites([...favorites, course]);
   };
 
+  const handleToggleTheme = () => {
+    setDarkMode((currentMode) => !currentMode);
+  };
+
   return (
     <main className="app">
       <Header />
+
+      <ThemeToggle
+        darkMode={darkMode}
+        onToggleTheme={handleToggleTheme}
+      />
 
       <section className="summary">
         <p>Total de cursos: {courses.length}</p>
