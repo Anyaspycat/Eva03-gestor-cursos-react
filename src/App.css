@@ -188,3 +188,62 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
+
+.theme-toggle {
+  display: block;
+  margin: 0 0 20px auto;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.theme-toggle:hover {
+  background: #1e293b;
+}
+
+body.dark-theme {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark-theme .header {
+  background: #020617;
+}
+
+body.dark-theme .summary p,
+body.dark-theme .favorite-stats,
+body.dark-theme .search-container,
+body.dark-theme .teacher-filter,
+body.dark-theme .course-card,
+body.dark-theme .message {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+body.dark-theme .course-card small {
+  color: #cbd5e1;
+}
+
+body.dark-theme .search-container input,
+body.dark-theme .teacher-filter select {
+  background: #0f172a;
+  color: #e2e8f0;
+  border-color: #475569;
+}
+
+body.dark-theme .search-container input::placeholder {
+  color: #94a3b8;
+}
+
+body.dark-theme .theme-toggle {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background: #cbd5e1;
+}
