@@ -1,5 +1,9 @@
 # Gestor de Cursos React
 
+**Autora:** Patricia Catalina Riveros Estay  
+**Repositorio:** [Eva03-gestor-cursos-react](https://github.com/Anyaspycat/Eva03-gestor-cursos-react)  
+**Aplicación publicada:** [Ver aplicación en Vercel](https://eva03-gestor-cursos-react.vercel.app/)
+
 Aplicación web SPA desarrollada en React que permite consultar cursos desde una API externa, buscar cursos, filtrar por docente y administrar cursos favoritos.
 
 ## Funcionalidades
@@ -160,6 +164,16 @@ Generar la compilación:
 npm run build
 ```
 
+## Publicación en Vercel
+
+La aplicación fue publicada en Vercel mediante la integración con el repositorio GitHub del proyecto.
+
+La versión desplegada se encuentra disponible en:
+
+[https://eva03-gestor-cursos-react.vercel.app/](https://eva03-gestor-cursos-react.vercel.app/)
+
+Cada actualización enviada al repositorio puede ser utilizada por Vercel para generar una nueva compilación y actualizar la aplicación publicada.
+
 ## Análisis con SonarQube
 
 El proyecto fue analizado mediante SonarQube Community ejecutado localmente con Docker.
@@ -184,8 +198,64 @@ No se incorporaron credenciales ni datos sensibles al código, y la IA no reempl
 
 ## Evidencias
 
-Las capturas del funcionamiento, `localStorage`, compilación y análisis con SonarQube se encuentran en la carpeta:
+Las capturas se encuentran almacenadas en la carpeta `evidencias/`.
 
-```text
-evidencias/
-```
+### 1. Proyecto React inicial
+
+![Proyecto React inicial](evidencias/01_proyecto_react_inicial.png)
+
+### 2. Repositorio GitHub inicial
+
+![Repositorio GitHub inicial](evidencias/02_repositorio_github_inicial.png)
+
+### 3. Aplicación funcionando
+
+![Aplicación funcionando](evidencias/03_aplicacion_funcionando.png)
+
+### 4. Búsqueda y favoritos
+
+![Búsqueda y favoritos](evidencias/04_busqueda_y_favoritos.png)
+
+### 5. Favoritos almacenados en LocalStorage
+
+![LocalStorage con favoritos](evidencias/05_localstorage_favoritos.png)
+
+### 6. Validación con ESLint
+
+![ESLint sin errores](evidencias/06_eslint_sin_errores.png)
+
+### 7. Filtro por docente
+
+![Filtro por docente](evidencias/07_filtro_por_docente.png)
+
+### 8. Favoritos por docente
+
+![Favoritos por docente](evidencias/08_favoritos_por_docente.png)
+
+### 9. Modo oscuro persistente
+
+![Modo oscuro](evidencias/09_modo_oscuro.png)
+
+### 10. Consumo alternativo mediante Fetch
+
+![Consumo con Fetch](evidencias/10_consumo_api_fetch.png)
+
+### 11. Compilación exitosa
+
+![Compilación exitosa](evidencias/11_compilacion_exitosa.png)
+
+### 12. SonarQube iniciado
+
+![SonarQube iniciado](evidencias/12_sonarqube_iniciado.png)
+
+### 13. Resultado inicial de SonarQube
+
+![Resultado de SonarQube](evidencias/13_resultado_sonarqube.png)
+
+### 14. Issues detectados
+
+![Issues detectados por SonarQube](evidencias/14_issues_detectadas.png)
+
+### 15. Resultado final sin issues
+
+![SonarQube sin issues](evidencias/15_sonarqube_sin_issues.png)
