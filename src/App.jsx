@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import TeacherFilter from "./components/TeacherFilter";
+import FavoriteStats from "./components/FavoriteStats";
 import CourseList from "./components/CourseList";
 import { getCourses } from "./services/courseService";
 import { useLocalStorage } from "./hooks/useLocalStorage";
@@ -83,7 +84,9 @@ function App() {
   }, [courses, searchTerm, selectedTeacher]);
 
   const handleToggleFavorite = (course) => {
-    const exists = favorites.some((favorite) => favorite.id === course.id);
+    const exists = favorites.some(
+      (favorite) => favorite.id === course.id
+    );
 
     if (exists) {
       const updatedFavorites = favorites.filter(
@@ -105,6 +108,11 @@ function App() {
         <p>Total de cursos: {courses.length}</p>
         <p>Favoritos: {favorites.length}</p>
       </section>
+
+      <FavoriteStats
+        favorites={favorites}
+        teachers={teachers}
+      />
 
       <SearchBar
         searchTerm={searchTerm}
