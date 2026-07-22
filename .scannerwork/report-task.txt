@@ -1,6 +1,0 @@
-projectKey=gestor-cursos-react
-serverUrl=http://localhost:9000
-serverVersion=26.7.0.124771
-dashboardUrl=http://localhost:9000/dashboard?id=gestor-cursos-react
-ceTaskId=67153976-4c08-462a-b102-a8e15565e408
-ceTaskUrl=http://localhost:9000/api/ce/task?id=67153976-4c08-462a-b102-a8e15565e408
