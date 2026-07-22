@@ -44,6 +44,32 @@ body {
   font-weight: bold;
 }
 
+.favorite-stats {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.favorite-stats h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.favorite-stats p {
+  margin: 0;
+}
+
+.favorite-stats ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.favorite-stats li {
+  margin-bottom: 6px;
+}
+
 .search-container {
   background: white;
   padding: 16px;
