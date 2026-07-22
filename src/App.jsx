@@ -31,7 +31,31 @@ function App() {
   };
 
   useEffect(() => {
-    loadCourses();
+  let isCancelled = false;
+
+  const initializeCourses = async () => {
+    try {
+      const data = await getCourses();
+
+      if (!isCancelled) {
+        setCourses(data);
+      }
+    } catch (error) {
+      if (!isCancelled) {
+        setError(error.message || "Ocurrió un error inesperado.");
+      }
+    } finally {
+      if (!isCancelled) {
+        setLoading(false);
+      }
+    }
+  };
+
+  initializeCourses();
+
+  return () => {
+    isCancelled = true;
+  };
   }, []);
 
   const filteredCourses = useMemo(() => {
