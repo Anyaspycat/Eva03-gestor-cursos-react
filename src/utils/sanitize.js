@@ -1,8 +1,10 @@
 export const sanitizeText = (text) => {
-  if (typeof text !== "string") return "";
+  if (typeof text !== "string") {
+    return "";
+  }
 
   return text
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
     .trim();
 };
